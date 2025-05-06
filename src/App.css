@@ -1,0 +1,92 @@
+
+html, body {
+  height: 90%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('D:\Projects\p1\heart_disease\src\photo.jpeg');  /* Use the correct relative path to the image */
+  background-size: cover;  /* Ensures the image covers the entire screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;  /* Full screen height */
+  width: 100%;  /* Full width */
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);  /* Optional: Add a white overlay with transparency for readability */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 
+.App {
+  text-align: center;
+  padding: 20px;
+  max-width: 900px;  /* Limit the width to avoid exceeding the page */
+  /* margin: 0 auto;
+  background-image: url('D:\Projects\p1\heart_disease\src\photo.jpeg');  /* Replace with your actual image URL */
+  /* background-size: cover;
+  background-position: enter;
+  background-repeat: no-repeat;
+  min-height: 100vh;  /* Ensure it covers the full screen height 
+}  */
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* Create two equal-width columns */
+  gap: 20px;  /* Space between fields */
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);  /* Slightly transparent background for readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  grid-column: span 2;  /* Make the button span across both columns */
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+p {
+  font-size: 1.1em;
+  color: #080707;
+}

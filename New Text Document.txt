@@ -1,0 +1,145 @@
+APP.JS
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import HeartDiseaseForm from "./HeartDiseaseForm"; // The form component
+import HelpDesk from "./HelpDesk"; // You can create a HelpDesk component later
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* Home page with two options */}
+          <Route path="/" element={<HomePage />} />
+
+          {/* Route for the Heart Disease Prediction form */}
+          <Route path="/heart-disease-check" element={<HeartDiseaseForm />} />
+
+          {/* Route for the Help Desk/Consultancy page */}
+          <Route path="/help-desk" element={<HelpDesk />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+// Home page component with two options
+const HomePage = () => {
+  return (
+    <div>
+      <h1>Welcome to Heart Disease Prediction System</h1>
+      <div>
+        <Link to="/heart-disease-check">
+          <button>Check Heart Disease</button>
+        </Link>
+      </div>
+      <div>
+        <Link to="/help-desk">
+          <button>Help Desk / Consultancy</button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
+
+
+
+/????
+import React, { useState } from "react";
+import axios from "axios";
+
+function HeartDiseaseForm() {
+  const [formData, setFormData] = useState({
+    age: '',
+    sex: '',
+    cp: '',
+    trestbps: '',
+    chol: '',
+    fbs: '',
+    restecg: '',
+    thalach: '',
+    exang: '',
+    oldpeak: '',
+    slope: '',
+    ca: '',
+    thal: ''
+  });
+  const [prediction, setPrediction] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await axios.post("http://localhost:5000/predict", formData);
+      setPrediction(response.data.prediction);
+    } catch (error) {
+      console.error("There was an error making the prediction", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div>
+      <h1>Heart Disease Prediction</h1>
+      <form onSubmit={handleSubmit}>
+        {/* Form inputs go here */}
+        <button type="submit" disabled={loading}>
+          {loading ? "Predicting..." : "Predict"}
+        </button>
+      </form>
+
+      {loading && <p>Loading...</p>}
+      {prediction !== null && !loading && (
+        <div>
+          <h2>Prediction Result:</h2>
+          <p>{prediction === 1 ? "Positive for Heart Disease" : "Negative for Heart Disease"}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default HeartDiseaseForm;
+
+
+???///
+import React from "react";
+
+function HelpDesk() {
+  return (
+    <div>
+      <h1>Help Desk / Consultancy</h1>
+      <p>For any inquiries or medical consultations, please contact us at help@consultancy.com or call +123-456-7890.</p>
+    </div>
+  );
+}
+
+export default HelpDesk;
+/????
+
+CSS APP.CSS
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
