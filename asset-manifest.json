@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/NishwanthBairagoni/Heart-Disease-Prediction/static/css/main.4b0a3498.css",
-    "main.js": "/NishwanthBairagoni/Heart-Disease-Prediction/static/js/main.22686153.js",
-    "static/js/453.6b601719.chunk.js": "/NishwanthBairagoni/Heart-Disease-Prediction/static/js/453.6b601719.chunk.js",
-    "static/media/photo.jpeg": "/NishwanthBairagoni/Heart-Disease-Prediction/static/media/photo.a78362d509055f5bde6d.jpeg",
-    "index.html": "/NishwanthBairagoni/Heart-Disease-Prediction/index.html",
-    "main.4b0a3498.css.map": "/NishwanthBairagoni/Heart-Disease-Prediction/static/css/main.4b0a3498.css.map",
-    "main.22686153.js.map": "/NishwanthBairagoni/Heart-Disease-Prediction/static/js/main.22686153.js.map",
-    "453.6b601719.chunk.js.map": "/NishwanthBairagoni/Heart-Disease-Prediction/static/js/453.6b601719.chunk.js.map"
+    "main.css": "/Heart-Disease-Prediction/static/css/main.e14392ef.css",
+    "main.js": "/Heart-Disease-Prediction/static/js/main.92597dda.js",
+    "static/js/453.6b601719.chunk.js": "/Heart-Disease-Prediction/static/js/453.6b601719.chunk.js",
+    "static/media/photo.jpeg": "/Heart-Disease-Prediction/static/media/photo.a78362d509055f5bde6d.jpeg",
+    "index.html": "/Heart-Disease-Prediction/index.html",
+    "main.e14392ef.css.map": "/Heart-Disease-Prediction/static/css/main.e14392ef.css.map",
+    "main.92597dda.js.map": "/Heart-Disease-Prediction/static/js/main.92597dda.js.map",
+    "453.6b601719.chunk.js.map": "/Heart-Disease-Prediction/static/js/453.6b601719.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b0a3498.css",
-    "static/js/main.22686153.js"
+    "static/css/main.e14392ef.css",
+    "static/js/main.92597dda.js"
   ]
 }
