@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-  background-image: url('D:\Projects\p1\heart_disease\src\photo.jpeg');  /* Use the correct relative path to the image */
+  background-image: url('D:\Projects\p1\heart_disease\public\photo.jpeg');  /* Use the correct relative path to the image */
   background-size: cover;  /* Ensures the image covers the entire screen */
   background-position: center;
   background-repeat: no-repeat;
